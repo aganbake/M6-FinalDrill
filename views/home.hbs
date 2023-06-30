@@ -1,0 +1,76 @@
+{{#if listExists}}
+  <section class="mid-section">
+    <div class="container-fluid table-responsive">
+      <form
+        class="d-flex row row-cols-lg-auto"
+        role="search"
+        action="/search"
+        method="POST"
+      >
+        <input
+          class="form-control"
+          type="text"
+          name="nombre"
+          placeholder="Buscar Anime"
+          aria-label="Search"
+          autocomplete="off"
+          required
+          autofocus
+        />
+        <button class="btn btn-outline-dark" type="submit">Buscar</button>
+      </form>
+      <table class="table align-middle table-striped">
+        <thead>
+          <th scope="col">ID</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Genero</th>
+          <th scope="col">Año</th>
+          <th scope="col">Autor</th>
+          <th scope="col"> </th>
+        </thead>
+        <tbody>
+          {{#each animes}}
+            <tr>
+              <td>
+                <a class="btn" href="/{{@key}}" type="button">
+                  {{@key}}</a>
+              </td>
+              <td>{{this.nombre}}</td>
+              <td>{{this.genero}}</td>
+              <td>{{this.year}}</td>
+              <td>{{this.autor}}</td>
+              <td>
+                <a class="btn" href="/delete/{{@key}}" type="button">
+                  <i class="bi bi-trash"></i></a>
+                <a class="btn" href="/update/{{@key}}" type="button">
+                  <i class="bi bi-pencil"></i></a>
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+    <a class="btn btn-outline-dark" href="/create" type="button">
+      Añadir Nuevo</a>
+  </section>
+{{else}}
+  <table class="table align-middle table-striped">
+    <thead>
+      <th scope="col">Nombre</th>
+      <th scope="col">Genero</th>
+      <th scope="col">Año</th>
+      <th scope="col">Autor</th>
+    </thead>
+    <tbody>
+      {{#with animes}}
+        <tr>
+          <td>{{this.nombre}}</td>
+          <td>{{this.genero}}</td>
+          <td>{{this.year}}</td>
+          <td>{{this.autor}}</td>
+        </tr>
+      {{/with}}
+    </tbody>
+  </table>
+  <a class="btn btn-outline-dark" href="/" type="button"> Volver</a>
+{{/if}}

@@ -1,0 +1,112 @@
+/* HTML */
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  size: 2.5rem;
+}
+/* HEADER */
+
+.big-heading {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 900;
+  size: 3.5rem;
+  line-height: 1.5;
+}
+
+/* NAV BAR */
+
+.navbar-brand {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.palette {
+  background-color: #f1ba63;
+  background-color: #fbf39b;
+  background-color: #643c30;
+  background-color: #a76050;
+  background-color: #d1c9bc;
+  background-color: #443c70;
+}
+
+/* TITLE  */
+
+.logo {
+  width: 30%;
+  right: 25%;
+}
+
+.logo-game {
+  width: 30%;
+  right: 25%;
+}
+/* SECTIONS  */
+
+.colored-section {
+  background-color: #443c70;
+  color: white;
+}
+/* 
+.mid-section {
+  background-color: #d1c9bc;
+  color: white;
+} */
+
+/* TABLE  */
+
+form {
+  padding-bottom: 5%;
+}
+
+/* CONFIG */
+
+.col {
+  padding: 20px;
+}
+
+.d-flex {
+  gap: 20px;
+}
+
+.container-fluid {
+  padding: 7% 10%;
+  text-align: center;
+}
+.container {
+  padding: 5% 0%;
+  margin: auto;
+}
+
+.container-top {
+  padding: 0% 10%;
+}
+
+@media (max-width: 1028px) {
+  #title {
+    text-align: center;
+  }
+  .digimon-img {
+    width: 100%;
+    border-radius: 100%;
+    margin: auto;
+  }
+  .digimon-table {
+    width: 60%;
+    border-radius: 100%;
+    margin: 20px;
+  }
+  #footer {
+    padding: 20%;
+  }
+
+  #needDigimon {
+    width: 100%;
+  }
+}

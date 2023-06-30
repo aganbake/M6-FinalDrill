@@ -1,0 +1,63 @@
+{{>header}}
+{{>navbar}}
+
+
+{{#each context}}
+<p> {{context}}</p>
+{{/each}}
+{{#with anime}}
+  <section class="mid-section">
+    <h1>Editar Anime: </h1>
+    <div class="container-fluid table-responsive">
+
+      <form
+        action="/update/{{this.id}}"
+        method="POST"
+        class="d-flex row row-cols-lg-auto"
+      >
+      <input
+          class="form-control"
+          type="text"
+          name="id"
+          value="{{this.id}}"
+          autocomplete="off"
+          required
+          autofocus
+        />
+        <input
+          class="form-control"
+          type="text"
+          name="nombre"
+          value="{{this.data.nombre}}"
+          autocomplete="off"
+          required
+          autofocus
+        />
+        <input
+          class="form-control"
+          type="text"
+          name="genero"
+          value="{{this.data.genero}}"
+          autocomplete="off"
+        />
+        <input
+          class="form-control"
+          type="text"
+          name="year"
+          value="{{this.data.year}}"
+          autocomplete="off"
+        />
+        <input
+          class="form-control"
+          type="text"
+          name="autor"
+          value="{{this.data.autor}}"
+          autocomplete="off"
+        />
+        <button class="btn btn-outline-success" type="submit"> Actualizar</button>
+      </form>
+      <a class="btn btn-outline-success" href="/" type="submit"> Volver</a>
+    </div>
+  </section>
+{{/with}}
+{{>footer}}
