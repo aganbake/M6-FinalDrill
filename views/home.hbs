@@ -40,7 +40,12 @@
               <td>{{this.year}}</td>
               <td>{{this.autor}}</td>
               <td>
-                <a class="btn" href="/delete/{{@key}}" type="button">
+                <a
+                  class="btn"
+                  href="/delete/{{@key}}"
+                  onclick="return confirm('¡¡Esta acción no se puede deshacer!!');"
+                  type="button"
+                >
                   <i class="bi bi-trash"></i></a>
                 <a class="btn" href="/update/{{@key}}" type="button">
                   <i class="bi bi-pencil"></i></a>
@@ -64,10 +69,10 @@
     <tbody>
       {{#with animes}}
         <tr>
-          <td>{{this.nombre}}</td>
-          <td>{{this.genero}}</td>
-          <td>{{this.year}}</td>
-          <td>{{this.autor}}</td>
+          <td>{{data.nombre}}</td>
+          <td>{{data.genero}}</td>
+          <td>{{data.year}}</td>
+          <td>{{data.autor}}</td>
         </tr>
       {{/with}}
     </tbody>

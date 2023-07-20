@@ -53,11 +53,6 @@ h3 {
   background-color: #443c70;
   color: white;
 }
-/* 
-.mid-section {
-  background-color: #d1c9bc;
-  color: white;
-} */
 
 /* TABLE  */
 
@@ -75,6 +70,12 @@ form {
   gap: 20px;
 }
 
+div span {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+}
+
 .container-fluid {
   padding: 7% 10%;
   text-align: center;
@@ -88,25 +89,7 @@ form {
   padding: 0% 10%;
 }
 
-@media (max-width: 1028px) {
-  #title {
-    text-align: center;
-  }
-  .digimon-img {
-    width: 100%;
-    border-radius: 100%;
-    margin: auto;
-  }
-  .digimon-table {
-    width: 60%;
-    border-radius: 100%;
-    margin: 20px;
-  }
-  #footer {
-    padding: 20%;
-  }
-
-  #needDigimon {
-    width: 100%;
-  }
+.lost-img {
+  width: 30%;
+  height: 30%;
 }

@@ -15,6 +15,8 @@
         method="POST"
         class="d-flex row row-cols-lg-auto"
       >
+      <div class="input-group mb-3">
+        <span class="input-group-text">ID</span>
       <input
           class="form-control"
           type="text"
@@ -22,8 +24,11 @@
           value="{{this.id}}"
           autocomplete="off"
           required
-          autofocus
+          readonly
         />
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Nombre: </span>
         <input
           class="form-control"
           type="text"
@@ -33,6 +38,9 @@
           required
           autofocus
         />
+      </div>
+        <div class="input-group mb-3">
+        <span class="input-group-text">Genero: </span>
         <input
           class="form-control"
           type="text"
@@ -40,6 +48,9 @@
           value="{{this.data.genero}}"
           autocomplete="off"
         />
+        </div>
+        <div class="input-group mb-3">
+        <span class="input-group-text">Año: </span>
         <input
           class="form-control"
           type="text"
@@ -47,6 +58,9 @@
           value="{{this.data.year}}"
           autocomplete="off"
         />
+        </div>
+        <div class="input-group mb-3">
+        <span class="input-group-text">Autor: </span>
         <input
           class="form-control"
           type="text"
@@ -54,6 +68,7 @@
           value="{{this.data.autor}}"
           autocomplete="off"
         />
+        </div>
         <button class="btn btn-outline-success" type="submit"> Actualizar</button>
       </form>
       <a class="btn btn-outline-success" href="/" type="submit"> Volver</a>
